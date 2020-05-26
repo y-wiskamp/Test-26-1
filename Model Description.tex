@@ -72,12 +72,13 @@ Table \ref{tab:listofsymbols} provides a comprehensive list of all variables and
 \subsection{Climate variables}
 In order to capture the effect of climate change on the economy it is necessary to include climate variables into the model. A small open economy model does not need to include the impact of domestic economic activity on climate variables. Therefore, in contrast to \cite{nordhaus1993optimal} we do not need to model the interaction between economic activity and climate change. Climate variables are independent of other endogenous variables in the model. We explicitly model the regional average annual temperature $T_{r,t}$, the average precipitation $PREC_{r,t}$, the average annual wind speed $W^S_{r,t}$, the sea level $SL_{t}$, cyclones $CYC_{r,t}$ and droughts $DRO_{r,t}$. 
 \begin{align}\label{eq:climatevariables}
-T_{r,t} = T_{r,0} + \eta_{T,r,t}, \nonumber \\
+T_{r,t} = T_{r,0} - \eta_{T,r,t}, \nonumber \\
 PREC_{r,t} = PREC_{r,0} + \eta_{PREC,r,t}, \nonumber \\
 WS_{r,t} = WS_{r,0} + \eta_{WS,r,t}, \nonumber \\
 SL_{t} = SL_{0} + \eta_{SL,r,t}, \nonumber \\
 CYC_{r,t} = CYC_{r,0} + \eta_{CYC,r,t}, \nonumber \\
-DRO_{r,t} = SL_{r,0} + \eta_{DRO,r,t}. \nonumber \\
+DRO_{r,t} = SL_{r,0} - \eta_{DRO,r,t}. \nonumber \\
+Das Vorzeichen habe ich geändert. Dies ist der entsprechende Kommentar dazu.
 \end{align}
 
 The approach in eq.~\ref{eq:climatevariables} allows to specify the evolution of climate variables according to the projections by meteorological models \citep[e.g.][]{stocker2013climate}.
